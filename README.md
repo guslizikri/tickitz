@@ -1,5 +1,5 @@
 <h1 align="center">
-  Backend With Nodejs and Postgre
+  Responsive Web
 </h1>
 
 <p align="center"><img src="./assets/img/tickitz2.png" width="400px" alt="Tickitz" /></p>
