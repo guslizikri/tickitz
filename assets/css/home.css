@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*, *::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Mulish", sans-serif;
+}
+/** Start header */
+header{
+    display: flex;
+    height: 12vh;
+    font-family: "Mulish", sans-serif;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    margin: 18px;
+}
+nav a:hover {
+    color: #1D4ED8;
+}
+
+header button{
+    margin: 8px;
+}
+
+.btn-outline-primary{
+    background-color: white;
+    color: #1D4ED8;
+}
+.btn-outline-primary:hover{
+    background-color: #1D4ED8;
+    color: white;
+}
+.btn-primary{
+    background-color: #1D4ED8;
+    color: white;
+}
+.btn-primary:hover{
+    background-color: white;
+    color: #1D4ED8;
+}
+.side-nav{
+    display: none;
+}
+/** End header */
+/* ! */
+/** Start movie of the week */
+.hero{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 76vh;
+}
+.no-1{
+    color: #1D4ED8;
+    font-size: 18px;
+}
+.discount{
+    color: #A0A3BD;
+    font-size: 16px;
+}
+
+.hero__content{
+    margin: 23px 0;
+}
+.text-hero{
+    width: 50%;
+}
+
+
+.image-hero{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "image1 image2"
+    "image3 image2"
+    "image3 image4";
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 35% 30% 35%; */
+    grid-template-rows: 39% auto 39%;
+    gap: 12px;
+}
+.image-hero__1{
+    grid-area: image1;
+    width: 100%;
+    background-image: url("../img/hero1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px 25px 0 0;
+}
+.image-hero__2{
+    grid-area: image2;
+    width: 100%;
+    background-image: url("../img/hero2.png");
+    border-radius: 25px 25px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.image-hero__3{
+    grid-area: image3;
+    width: 100%;
+    background-image: url("../img/hero3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 0 25px 25px;
+}
+.image-hero__4{
+    grid-area: image4;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 0 25px 25px;
+    background-image: url("../img/hero4.png");
+}
+
+/** End movie of the week */
+/* ! */
+/* * Start Why choose? */
+.article{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.why-choose h3{
+    width: 45%;
+    margin: 15px 0;
+}
+.icon-why{
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background-color: #1D4ED833;
+    border-radius: 50%;
+}
+.icon-why img{
+    margin: auto;
+}
+article.card{
+    width: 32%;
+    border: none;
+}
+.card .card-body{
+    padding: 0;
+}
+
+/* * End Why choose? */
+/* ! */
+
+/** Start main content */
+/* watch today */
+.watched-today__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.watched-today__footer{
+    display: flex;
+    justify-content: center;
+}
+.watched-today span{
+    color: #1D4ED8;
+}
+.watched-today h2{
+    width: 50%;
+    text-align: center;
+}
+.movie{
+    display: flex;
+    justify-content: space-between;
+}
+.movie .card{
+    width: 24%;
+    border: none;
+}
+.card-body .btn{
+    background-color: #A0A3BD1A;
+    border-radius: 18px;
+    margin: 0 8px 0 0;
+}
+/* button overlay */
+.overlay{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out;
+}
+.overlay:hover img{
+    cursor: pointer;
+    filter: brightness(60%);
+}
+.overlay-button{  
+    opacity: 0;
+    width: 80%;
+    position: absolute;
+}
+.overlay:hover .overlay-button{
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+.overlay-button .detail{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 7px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-button .detail:hover{
+    display: flex;
+    text-decoration: none;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+}
+.overlay-button .btn{
+    width: 100%;
+    height: 50px;
+}
+.watched-today .recomended{
+    position: absolute;
+    top: 8px;
+    left: -4px;
+    width: 47%;
+    border-radius: 20px 20px 20px 0px;
+    background-color: #1D4ED8;
+    text-align: center;
+    color: white;
+}
+
+/* coming soon */
+.coming-soon__header{
+    display: flex;
+    justify-content: space-between;
+}
+.coming-soon__header span{
+    color: #1D4ED8;
+}
+.header__pagination{
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.header__pagination .arrow{
+    background-color: #1D4ED8;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+/** End main content */
+
+/** Start subscribe */
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2563EB;
+    height: 42vh;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 68px;
+}
+.subscribe__form{
+    display: flex;
+    align-items: center;
+    
+}
+.subscribe__form input{
+    background-color: #2563EB;
+    color: white;
+}
+.subscribe__form button{
+    width: 36%;
+}
+.subscribe__form input::placeholder{
+    color: white;
+}
+.subscribe img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 80px;
+}
+/** End subscribe */
+
+/** Start footer */
+.media{
+    display: flex;
+    justify-content: space-between;
+}
+footer ul{
+ list-style: none;
+ padding: 0;
+ margin-top: 24px;
+}
+footer ul li{
+ margin-top: 8px;
+}
+footer ul li a{
+ text-decoration: none;
+ color: #4E4B66;
+}
+.footer__item{
+    width: 20%;
+}
+.tickitz.footer__item{
+    width: 27%;
+}
+.footer__item span{
+    font-weight: bold;
+}
+/** End footer */
+
+
+/* * Responsive */
+@media screen and (max-width: 700px){
+    /* * header */
+    header nav{
+        display: none;
+    }
+    header .button{
+        display: none;
+    }
+    .side-nav{
+        display: inline;
+    }
+    header{
+        margin: 0 5vw;
+        justify-content: space-between;
+    }
+
+    /* * hero */
+    .hero{
+        flex-direction: column;
+        height: 130vh;
+    }
+    .text-hero{
+        width: 95%;
+        text-align: center;
+    }
+    .image-hero{
+        margin-top: 18px;
+        width: 100%;
+    }
+
+    /* * why choose? */
+    section.why-choose{
+        text-align: center;
+
+    }
+    section .why-choose__content{
+        width: 100%;
+    }
+    div.article{
+        flex-direction: column;
+    }
+    .article .card{
+        width: 100%;
+    }
+    article .card-body{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon-why{
+        margin-top: 24px;
+    }
+
+    /* * main content */
+    .movie{
+        overflow-x: auto;
+    }
+    .watched-today__header{
+        width: 100%;
+    }
+    .watched-today__header h2{
+        width: 95%;
+    }
+    /* movie card */
+    .movie{
+        overflow-x: auto;
+        align-items: center;
+    }
+    .movie .card{
+        width: 70%;
+        flex: 0 0 auto;
+        margin-right: 12px;
+    }
+    .card-body .btn{
+        width: auto;
+    }
+    .display-none{
+        display: none;
+    }
+    .coming-soon__header{
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* * subscribe */
+    .subscribe{
+        width: 90vw;
+        text-align: center;
+        height: 90vh;
+    }
+    .subscribe h1{
+        width: 90%;
+    }
+    .subscribe__form{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+    .subs-form__content{
+        width: 100%;
+    }
+    .subscribe__form input{
+        width: 100%;
+        height: 10vh; 
+        margin-bottom: 10px;
+    }
+    .subscribe__form button{
+        width: 100%;
+        height: 10vh;
+    }
+
+    /* * footer */
+    .media{
+        flex-wrap: wrap;
+    }
+    .footer__item{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .tickitz.footer__item{
+        width: 90%;
+    }
+    .footer__item ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width: 700px){
+    
+}
+@media screen and (min-width: 1030px){
+    
+}
+
+

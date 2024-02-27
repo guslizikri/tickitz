@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header><img src="./assets/img/tickitz.png" alt="Tickitz" /></header>
+
+    <main class="login">
+      <h1 class="login__content-login">Welcome Back👋</h1>
+      <p class="login__content-login">
+        Sign in with your data that you entered during your registration
+      </p>
+      <form action="" class="login__content-login">
+        <div class="form__input-box">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter your email" />
+        </div>
+        <div class="form__input-box">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div class="form__forgot-pass">
+          <a href="#" class="forgot-pass__a">Forgot your Password?</a>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <section class="line-or login__content-login">
+        <span class="line-or__line"></span>
+        <span class="line-or__or">Or</span>
+        <span class="line-or__line"></span>
+      </section>
+      <section class="login-with login__content-login">
+        <button>
+          <img
+            src="./assets/img/icon-google.png"
+            alt="G"
+            class="login-with__icon"
+          />
+          <span class="login-with__span">Google</span>
+        </button>
+        <button>
+          <img
+            src="./assets/img/icon-fb.png"
+            alt="FB"
+            class="login-with__icon"
+          />
+          <span class="login-with__span">Facebook</span>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>

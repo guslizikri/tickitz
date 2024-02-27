@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*, *::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Mulish", sans-serif;
+}
+/** Start header */
+header{
+    display: flex;
+    height: 12vh;
+    font-family: "Mulish", sans-serif;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    margin: 18px;
+}
+nav a:hover {
+    color: #1D4ED8;
+}
+
+button{
+    margin: 8px;
+}
+
+.btn-outline-primary{
+    background-color: white;
+    color: #1D4ED8;
+}
+.btn-outline-primary:hover{
+    background-color: #1D4ED8;
+    color: white;
+}
+.btn-primary{
+    background-color: #1D4ED8;
+    color: white;
+}
+.btn-primary:hover{
+    background-color: white;
+    color: #1D4ED8;
+}
+/** End header */
+
+/** Start banner */
+
+.hero{
+    color: white;
+    padding: 100px 100px;
+    width: 100%;
+    height: 60vh;
+    background-image: url("../img/detail-movie.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px rgba(27, 27, 27, 0.5);
+}
+
+/** End banner */
+
+/** Start main-content */
+main{
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-areas: "image title title"
+    "image genre genre"
+    "image release-date director"
+    "image duration casts"
+    "synopsis synopsis synopsis";
+    grid-template-columns: 1fr 1fr 2fr;
+    /* grid-template-columns: 25% 20% 40%; */
+    grid-template-rows: 14% 13% 19% 0.4fr 1fr;
+    column-gap: 8px;
+    border: 1px solid rebeccapurple;
+}
+main img{
+    grid-area: image;   
+    position: relative;
+    bottom: 180px;
+}
+.main-content{
+    position: relative;
+}
+.title{
+    grid-area: title;
+}
+.genre{
+    grid-area: genre;
+    display: flex;
+    align-items: center;
+}
+.genre div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 36px;
+    background-color: #A0A3BD1A;
+    margin-right: 12px;
+    border-radius: 25px;
+}
+.genre .btn{
+    background-color: #A0A3BD1A;
+    border-radius: 18px;
+    margin: 0 8px 0 0;
+}
+.release-date{
+    grid-area: release-date;
+    display: flex;
+    flex-direction: column;
+}
+.director{
+    grid-area: director;
+    display: flex;
+    flex-direction: column;
+}
+.duration{
+    grid-area: duration;
+    display: flex;
+    flex-direction: column;
+}
+.casts{
+    grid-area: casts;
+    display: flex;
+    flex-direction: column;
+}
+.synopsis{
+    grid-area: synopsis;
+}
+/** End main-content */
+/* ! */
+/* * Start booking */
+.mobile{
+    display: none;
+}
+.choose-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.choose-item{
+    width: 24%;
+}
+.choose-item span{
+    font-weight: bold;
+}
+.form-select{
+    background-color: #EFF0F6;
+    width: 100%;
+    margin-top: 8px;
+}
+.booking-fliter{
+    width: 20%;
+    height: 100%;
+}
+.booking-fliter button{
+    margin: 0;
+    width: 90%;
+    height: 100%;
+    background-color: #1D4ED8;
+}
+.booking-fliter button:hover{
+    background-color: #EFF0F6;
+}
+
+
+/* Choose cinema */
+.choose-cinema{
+    display: flex;
+    justify-content: space-between;
+}
+.choose-2 span{
+    font-weight: bold;
+}
+.cinema{
+    width: 24%;
+    height: 16vh;
+    border: 1px solid #DEDEDE;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+/* pagination */
+.pagination li{
+    margin: 4px;
+}
+/* btn book */
+.btn-book{
+    display: flex;
+    justify-content: center;
+}
+.btn-book button{
+    width: 10vw;
+    background-color: #1D4ED8;
+}
+/* * End booking */
+
+/** Start footer */
+.media{
+    display: flex;
+    justify-content: space-between;
+}
+footer ul{
+ list-style: none;
+ padding: 0;
+ margin-top: 24px;
+}
+footer ul li{
+ margin-top: 8px;
+}
+footer ul li a{
+ text-decoration: none;
+ color: #4E4B66;
+}
+.footer__item{
+    width: 20%;
+}
+.tickitz.footer__item{
+    width: 27%;
+}
+.footer__item span{
+    font-weight: bold;
+}
+/** End footer */
+
+
+/* *responsive */
+@media screen and (max-width: 1030px){
+   
+    main h1{
+        font-size: 32px;
+    }
+    
+}
+
+@media screen and (max-width: 786px){
+    /* * header */
+    header nav{
+        display: none;
+    }
+    header .button{
+        display: none;
+    }
+    .side-nav{
+        display: inline;
+    }
+    header{
+        margin: 0 5vw;
+        justify-content: space-between;
+    }
+    /* *main */
+    main{
+        justify-content: space-around;
+        height: 700px;
+        grid-template-areas: "image image"
+        "title title"
+        "genre genre"
+        "release-date director"
+        "duration casts"
+        "synopsis synopsis";
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 25% 20% 40%; */
+        grid-template-rows: 35% 5% 10% 10% 10% 20%;
+        column-gap: 0;
+    }
+    main img{
+        justify-self: center;
+    }
+    .title{
+        justify-self: center;
+    }
+    .genre{
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 576px){
+    /* * header */
+    header nav{
+        display: none;
+    }
+    header .button{
+        display: none;
+    }
+    .side-nav{
+        display: inline;
+    }
+    header{
+        margin: 0 5vw;
+        justify-content: space-between;
+    }
+
+    /* main and hero */
+    .hero{
+        background-image: url("../img/detail-hero-mobile.png");
+    }
+    main{
+        justify-content: space-around;
+        height: 900px;
+        grid-template-areas: "image image"
+        "title title"
+        "genre genre"
+        "release-date director"
+        "duration casts"
+        "synopsis synopsis";
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 25% 20% 40%; */
+        grid-template-rows: 27% 3% 8% 8% 13% auto;
+        column-gap: 0;
+    }
+    main img{
+        justify-self: center;
+    }
+    .title{
+        justify-self: center;
+    }
+    .genre{
+        justify-self: center;
+    }
+    main h1{
+        font-size: 24px;
+    }
+
+    /* booking */
+    .display-none{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        text-align: center;
+    }
+    .choose-1{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .choose-item span{
+        display: none;
+    }
+    .choose-item{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .booking-fliter{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .booking-fliter button{
+        width: 90%;
+    }
+
+    .choose-2 span{
+        display: none;
+    }
+    .choose-cinema{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .cinema{
+        width: 90%;
+        margin-bottom: 12px;
+        height: 30vh;
+    }
+    .btn-book button{
+        display: none;
+    }
+    /* * footer */
+    .media{
+        flex-wrap: wrap;
+    }
+    .footer__item{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .tickitz.footer__item{
+        width: 90%;
+    }
+    .footer__item ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}

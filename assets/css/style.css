@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*, *::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Mulish", sans-serif;
+}
+/** Start header */
+header{
+    display: flex;
+    height: 12vh;
+    font-family: "Mulish", sans-serif;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    margin: 18px;
+}
+nav a:hover {
+    color: #1D4ED8;
+}
+
+header button{
+    margin: 8px;
+}
+
+.btn-outline-primary{
+    background-color: white;
+    color: #1D4ED8;
+}
+.btn-outline-primary:hover{
+    background-color: #1D4ED8;
+    color: white;
+}
+.btn-primary{
+    background-color: #1D4ED8;
+    color: white;
+}
+.btn-primary:hover{
+    background-color: white;
+    color: #1D4ED8;
+}
+/** End header */
+/* ! */
+/** Start movie of the week */
+.hero{
+    color: white;
+    padding: 100px 0px;
+    width: 100%;
+    height: 68vh;
+    background-image: url("../img/hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px rgba(27, 27, 27, 0.5);
+}
+.hero__content{
+    margin: 15px 0;
+}
+
+.hero h1{
+    width: 50%;
+    color: white;
+}
+.hero__slide{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: -90px;
+    height: 30px;
+}
+
+.hero__slide__1{
+    width: 2.6rem;
+    height: 0.4rem;
+    background-color: #1D4ED8;
+    border-radius: 5px;
+}
+.hero__slide__non-active{
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 7px;
+}
+
+/** End movie of the week */
+/* ! */
+/* * Start Why choose? */
+.article{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.why-choose h3{
+    width: 45%;
+    margin: 15px 0;
+}
+.icon-why{
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background-color: #1D4ED833;
+    border-radius: 50%;
+}
+.icon-why img{
+    margin: auto;
+}
+article.card{
+    width: 32%;
+    border: none;
+}
+.card .card-body{
+    padding: 0;
+}
+
+/* * End Why choose? */
+/* ! */
+
+/** Start main content */
+
+/* find movie */
+.find-movie{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.find-movie span{
+    margin-bottom: 10px;
+    display: block;
+}
+.find-movie__search{
+    width: 30%;
+    margin: 10px;
+}
+.find-movie__filter{
+    width: 70%;
+    margin: 10px;
+}
+.find-movie__filter label.btn-outline-primary{
+    border: none;
+    color: black;
+}
+.find-movie__filter label.btn{
+    border-radius: 10px;
+}
+
+/* list movie */
+.movie{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.movie .card{
+    width: 24%;
+    border: none;
+}
+.overlay{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out;
+}
+.overlay:hover img{
+    cursor: pointer;
+    filter: brightness(60%);
+}
+.overlay-button{  
+    opacity: 0;
+    width: 80%;
+    position: absolute;
+}
+.overlay:hover .overlay-button{
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+.overlay-button .detail{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 7px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-button .detail:hover{
+    display: flex;
+    text-decoration: none;
+    color: #2563EB;
+    border: 1px solid #2563EB;
+}
+.overlay-button .btn{
+    width: 100%;
+    height: 50px;
+}
+.recomended{
+    position: absolute;
+    top: 8px;
+    left: -4px;
+    width: 45%;
+    border-radius: 20px;
+    background-color: #1D4ED8;
+    text-align: center;
+    color: white;
+}
+/* pagination */
+.page-list a{
+    height: auto;
+    color: black;
+    border-radius: 50%;
+}
+.page-list a:focus{
+    color: black;
+    border-radius: 50%;
+    background-color: #1D4ED8;
+}
+/** End main content */
+
+/** Start subscribe */
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2563EB;
+    height: 42vh;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 68px;
+}
+.subscribe__form{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    
+}
+.subscribe__form input{
+    background-color: #2563EB;
+    color: white;
+}
+.subscribe__form button{
+    width: 36%;
+}
+.subscribe__form input::placeholder{
+    color: white;
+}
+.subscribe img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 80px;
+}
+/** End subscribe */
+
+/** Start footer */
+.media{
+    display: flex;
+    justify-content: space-between;
+}
+footer ul{
+ list-style: none;
+ padding: 0;
+ margin-top: 24px;
+}
+footer ul li{
+ margin-top: 8px;
+}
+footer ul li a{
+ text-decoration: none;
+ color: #4E4B66;
+}
+.footer__item{
+    width: 20%;
+}
+.tickitz.footer__item{
+    width: 27%;
+}
+.footer__item span{
+    font-weight: bold;
+}
+/** End footer */
+
+
+

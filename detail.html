@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/detail.css" />
+    <title>Detail Movie</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/img/tickitz2.png" alt="Tickitz" />
+      <nav>
+        <a href="">Home</a>
+        <a href="">Movie</a>
+        <a href="">Buy Ticket</a>
+      </nav>
+      <div class="button">
+        <a href="login.html"
+          ><button type="button" class="btn btn-outline-primary">
+            Sign In
+          </button>
+        </a>
+        <a href="login.html" class="sign-up"
+          ><button type="button" class="btn btn-primary">Sign Up</button>
+        </a>
+      </div>
+      <img src="./assets/img/side-nav.png" alt="" class="side-nav mobile" />
+    </header>
+    <section class="hero"></section>
+    <main class="container mt-4">
+      <img src="./assets/img/movie4.png" alt="" />
+      <h1 class="title main-content">Spider-Man: Homecoming</h1>
+      <div class="genre main-content">
+        <!-- <div><a href="#">Action</a></div>
+        <div><a href="#">Adventure</a></div> -->
+        <a href="home.html"
+          ><button type="button" class="btn">Action</button>
+        </a>
+        <a href="home.html" class="sign-up"
+          ><button type="button" class="btn">Adventure</button>
+        </a>
+      </div>
+      <div class="release-date main-content">
+        <span>Release Date</span>
+        <span>June 28, 2017</span>
+      </div>
+      <div class="duration main-content">
+        <span>Duration</span>
+        <span>2 hours 13 minutes </span>
+      </div>
+      <div class="director main-content">
+        <span>Director</span>
+        <span>Jon Watss</span>
+      </div>
+      <div class="casts main-content">
+        <span>Casts</span>
+        <span>Tom Holland, Michael Keaton, Robert Downey Jr</span>
+      </div>
+      <div class="synopsis main-content">
+        <span>Synopsis</span>
+        <p class="main-content">
+          Thrilled by his experience with the Avengers, Peter returns home,
+          where he lives with his Aunt May, under the watchful eye of his new
+          mentor Tony Stark, Peter tries to fall back into his normal daily
+          routine - distracted by thoughts of proving himself to be more than
+          just your friendly neighborhood Spider-Man - but when the Vulture
+          emerges as a new villain, everything that Peter holds most important
+          will be threatened.
+        </p>
+      </div>
+    </main>
+
+    <section class="booking container mt-4">
+      <h1 class="display-none">Book Tickets</h1>
+      <h2 class="mobile">Showtimes and Tickets</h2>
+      <div class="choose-1 choose mt-4">
+        <div class="date choose-item">
+          <span>Choose Date</span>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>2024/12/31</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="time display-none choose-item">
+          <span>Choose TIme</span>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>12:00 AM</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="location choose-item">
+          <span>Choose location</span>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Antartika</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <a href="login.html" class="booking-fliter"
+          ><button type="button" class="btn btn-primary">Filter</button>
+        </a>
+      </div>
+      <div class="choose-2 choose mt-5">
+        <span>Choose Cinema</span>
+        <div class="choose-cinema">
+          <div class="cinema">
+            <img src="./assets/img/cinema1.png" alt="" />
+          </div>
+          <div class="cinema">
+            <img src="./assets/img/sponsor3.png" alt="" />
+          </div>
+          <div class="cinema">
+            <img src="./assets/img/cinema3.png" alt="" />
+          </div>
+          <div class="cinema">
+            <img src="./assets/img/cinema1.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="pagination justify-content-center mt-5">
+        <nav aria-label="...">
+          <ul class="pagination pagination-md">
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">1</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="btn-book">
+        <a href="login.html"
+          ><button type="button" class="btn btn-primary">Book Now</button>
+        </a>
+      </div>
+    </section>
+    <!-- ! Start footer -->
+    <footer class="container mt-5">
+      <div class="media">
+        <div class="tickitz footer__item">
+          <img src="./assets/img/tickitz2.png" alt="" />
+          <p class="mt-4">
+            Stop waiting in line. Buy tickets conveniently, watch movies quetly
+          </p>
+        </div>
+        <div class="explore footer__item">
+          <span>Explore</span>
+          <ul>
+            <li><a href="#">Cinemas</a></li>
+            <li><a href="#">Movies List</a></li>
+            <li><a href="#">My Ticket</a></li>
+            <li><a href="#">Notification</a></li>
+          </ul>
+        </div>
+        <div class="sponsor footer__item">
+          <span>Our Sponsor</span>
+          <ul>
+            <li class="mb-4"><img src="./assets/img/sponsor1.png" alt="" /></li>
+            <li class="mb-4"><img src="./assets/img/sponsor2.png" alt="" /></li>
+            <li class="mb-4"><img src="./assets/img/sponsor3.png" alt="" /></li>
+          </ul>
+        </div>
+        <div class="follow footer__item">
+          <span>Follow Us</span>
+          <ul>
+            <li><a href="#">Tickitz Cinema id</a></li>
+            <li><a href="#">Tickitz.id</a></li>
+            <li><a href="#">Tickitz.id</a></li>
+            <li><a href="#">Tickitz Cinema id</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-5 mb-5">
+        © 2020 Tickitz. All Rights Reserved
+      </div>
+    </footer>
+    <!-- ! End footer -->
+  </body>
+</html>
