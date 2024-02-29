@@ -401,6 +401,7 @@ footer ul li a{
     .movie{
         overflow-x: auto;
         align-items: center;
+        margin-bottom: 32px;
     }
     .movie .card{
         width: 70%;
@@ -460,7 +461,7 @@ footer ul li a{
     }
     .footer__item ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
         align-items: center;
         flex-wrap: wrap;
     }

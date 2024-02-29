@@ -78,7 +78,6 @@ main{
     /* grid-template-columns: 25% 20% 40%; */
     grid-template-rows: 14% 13% 19% 0.4fr 1fr;
     column-gap: 8px;
-    border: 1px solid rebeccapurple;
 }
 main img{
     grid-area: image;   
@@ -188,6 +187,10 @@ main img{
     justify-content: center;
     align-items: center;
     border-radius: 6px;
+}
+.cinema:hover{
+    background-color: #1D4ED8;
+    cursor: pointer;
 }
 
 /* pagination */
