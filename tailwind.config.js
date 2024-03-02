@@ -3,9 +3,14 @@ module.exports = {
   content: ['./public/**/*.{html,js}'],
   theme: {
     container:{
-      centered: true,
+      center: true,
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#1D4ED8",
+        secondary: "#0F172A",
+      }
+    },
   },
   plugins: [],
 }
