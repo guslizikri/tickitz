@@ -86,133 +86,156 @@
     </header>
     <!-- ! Main -->
     <main class="container min-h-screen mt-12 bg-red-700 flex gap-5">
-      <div class="profile w-1/4 bg-white h-screen rounded-lg"></div>
-      <div class="setting w-3/4">
-        <div class="bg-white text-secondary px-8 py-4 rounded-lg space-x-8">
-          <a href="#" class="hover:text-primary border-b-2 border-primary py-4"
+      <div
+        class="profile w-1/4 flex justify-center bg-white h-screen rounded-lg"
+      >
+        <div
+          class="w-[136px] h-[136px] rounded-full bg-profile bg-no-repeat bg-cover"
+        ></div>
+      </div>
+      <div class="history w-3/4">
+        <div
+          class="bg-white mb-10 text-secondary px-8 py-4 rounded-lg space-x-8"
+        >
+          <a href="./profile.html" class="text-[#AAAAAA] hover:text-primary"
             >Account Settings</a
           >
-          <a
-            href="./orderhistory.html"
-            class="text-[#AAAAAA] hover:text-primary"
+          <a href="#" class="hover:text-primary border-b-2 border-primary py-4"
             >Order History</a
           >
         </div>
 
-        <div class="py-6 px-8 mt-10 mb-4 bg-white rounded-lg">
-          <h1 class="border-b-2 border[#DEDEDE] py-3 mb-7">
-            Detail Information
-          </h1>
-
-          <div class="grid grid-cols-2 mb-4 gap-x-6 gap-y-2">
-            <div class="">
-              <label
-                for="firstname"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >First Name</label
+        <div class="py-2 mb-4 bg-white rounded-lg">
+          <div class="flex justify-between py-5 px-12 border-b-2 items-center">
+            <div class="space-y-2">
+              <span class="text-[#AAAAAA]"
+                >Tuesday, 07 July 2020 - 04:30pm</span
               >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="text"
-                  name="firstname"
-                  id="firstname"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="Jonas"
-                />
-              </div>
+              <h1 class="font-bold text-2xl">Spider-Man: Homecoming</h1>
             </div>
-            <div class="">
-              <label
-                for="lastname"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >Last Name</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="El Rodriguez"
-                />
-              </div>
-            </div>
-            <div class="">
-              <label
-                for="email"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >Email</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="jonasrodrigu123@gmail.com"
-                />
-              </div>
-            </div>
-
-            <div class="">
-              <label
-                for="phone"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >Phone Number</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <div
-                  class="pointer-events-none border-r-2 absolute inset-y-0 left-0 flex items-center px-3"
-                >
-                  <span class="text-gray-500 sm:text-sm">+62</span>
-                </div>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-14 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="81445687121"
-                />
-              </div>
+            <div>
+              <img src="./assets/img/ordersponsor1.png" alt="" />
             </div>
           </div>
-        </div>
-        <div class="py-6 px-8 mt-10 mb-4 bg-white rounded-lg">
-          <h1 class="border-b-2 border[#DEDEDE] py-3 mb-7">
-            Account and Privacy
-          </h1>
-
-          <div class="grid grid-cols-2 mb-4 gap-x-6 gap-y-2">
-            <div class="">
-              <label
-                for="password"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >New Password</label
+          <div class="flex justify-between items-center py-5 px-12">
+            <div class="button space-x-4">
+              <button
+                class="w-[196px] bg-[#00BA8833] hover:brightness-50 text-[#00BA88] px-4 py-2 rounded"
               >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="Write your password"
-                />
+                Ticket in active
+              </button>
+              <button
+                class="w-[196px] bg-[#E82C2C33] hover:brightness-50 text-[#E82C2C] px-4 py-2 rounded"
+              >
+                Not Paid
+              </button>
+            </div>
+            <div>
+              <span
+                class="text-[#AAAAAA] hover:cursor-pointer"
+                id="button-show-detail"
+                >Show Details</span
+              >
+            </div>
+          </div>
+          <div class="hidden mb-4 space-y-4 py-1 px-12" id="show-detail">
+            <h1 class="font-bold text-lg">Ticket Information</h1>
+            <div class="flex items-center justify-between">
+              <span class="text-[#8692A6]">No. Rekening Virtual</span>
+              <div class="flex items-center gap-2">
+                <span class="font-bold">12321328913829724</span>
+                <button
+                  class="w-1/2 hover:cursor-pointer text-primary border-[1px] border-primary px-4 py-2 rounded"
+                >
+                  Copy
+                </button>
               </div>
             </div>
-            <div class="">
-              <label
-                for="confirm-pass"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >Confirm Password</label
+            <div class="flex items-center justify-between">
+              <span class="text-[#8692A6]">Total Payment</span>
+              <span class="text-primary">$30</span>
+            </div>
+            <p class="text-[#8692A6] tracking-wide text-lg">
+              Pay this payment bill before it is due, on
+              <span class="text-[#D00707]">June 23, 2023</span>. If the bill has
+              not been paid by the specified time, it will be forfeited
+            </p>
+            <button
+              class="w-[196px] bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded"
+            >
+              Cek Pembayaran
+            </button>
+          </div>
+        </div>
+        <div class="py-2 mb-4 bg-white rounded-lg">
+          <div class="flex justify-between py-5 px-12 border-b-2 items-center">
+            <div class="space-y-2">
+              <span class="text-[#AAAAAA]"
+                >Tuesday, 07 July 2020 - 04:30pm</span
               >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="password"
-                  name="confirm-pass"
-                  id="confirm-pass"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="Confirm your password"
-                />
+              <h1 class="font-bold text-2xl">Spider-Man: Homecoming</h1>
+            </div>
+            <div>
+              <img src="./assets/img/ordersponsor1.png" alt="" />
+            </div>
+          </div>
+          <div class="flex justify-between items-center py-5 px-12">
+            <div class="button space-x-4">
+              <button
+                class="w-[196px] bg-[#6E719133] hover:brightness-50 text-black px-4 py-2 rounded"
+              >
+                Ticket in active
+              </button>
+              <button
+                class="w-[196px] bg-[#1D4ED833] hover:brightness-50 text-primary px-4 py-2 rounded"
+              >
+                Not Paid
+              </button>
+            </div>
+            <div>
+              <span
+                class="text-[#AAAAAA] hover:cursor-pointer"
+                id="button-show-detail2"
+                >Show Details</span
+              >
+            </div>
+          </div>
+          <div class="hidden mb-4 space-y-4 py-1 px-12" id="show-detail2">
+            <h1 class="font-bold text-lg">Ticket Information</h1>
+
+            <div class="flex">
+              <div class="img">
+                <img src="./assets/img/qr-code.png" alt="" />
+              </div>
+              <div class="grid grid-cols-4 bg-slate-400">
+                <div class="bg-fuchsia-400">
+                  <h6>Category</h6>
+                  <span>PG-13</span>
+                </div>
+                <div>
+                  <h6>Category</h6>
+                  <span>PG-13</span>
+                </div>
+                <div>
+                  <h6>Category</h6>
+                  <span>PG-13</span>
+                </div>
+                <div>
+                  <h6>Category</h6>
+                  <span>PG-13</span>
+                </div>
+                <div>
+                  <h6>Category</h6>
+                  <span>PG-13</span>
+                </div>
+                <div>
+                  <h6>Category</h6>
+                  <span>PG-13</span>
+                </div>
+                <div>
+                  <h6>Category</h6>
+                  <span>PG-13</span>
+                </div>
               </div>
             </div>
           </div>
@@ -295,6 +318,17 @@
         .getElementById("menu-toggle")
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+      // Toggle show detail
+      document
+        .getElementById("button-show-detail")
+        .addEventListener("click", function () {
+          document.getElementById("show-detail").classList.toggle("hidden");
+        });
+      document
+        .getElementById("button-show-detail2")
+        .addEventListener("click", function () {
+          document.getElementById("show-detail2").classList.toggle("hidden");
         });
     </script>
   </body>

@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Your Website</title>
   </head>
-  <body class="bg-[#A0A3BD33]">
+  <body>
     <!--  Header -->
-    <header class="bg-white text-secondary p-2 sm:p-4">
+    <header class="relative bg-white text-secondary p-2 sm:p-4">
       <div
         class="container w-full flex items-center justify-between px-2 sm:px-0 md:justify-around"
       >
@@ -85,140 +85,41 @@
       </div>
     </header>
     <!-- ! Main -->
-    <main class="container min-h-screen mt-12 bg-red-700 flex gap-5">
-      <div class="profile w-1/4 bg-white h-screen rounded-lg"></div>
-      <div class="setting w-3/4">
-        <div class="bg-white text-secondary px-8 py-4 rounded-lg space-x-8">
-          <a href="#" class="hover:text-primary border-b-2 border-primary py-4"
-            >Account Settings</a
-          >
-          <a
-            href="./orderhistory.html"
-            class="text-[#AAAAAA] hover:text-primary"
-            >Order History</a
-          >
+    <section class="flex flex-wrap w-full">
+      <aside
+        class="sm:w-3/5 w-full h-screen md:px-8 gap-5 lg:px-20 text-white flex flex-col justify-center items-center md:items-start shadow-shadow-blur bg-cover bg-no-repeat bg-hero-result"
+      >
+        <img src="./assets/img/tickitz3.png" alt="" />
+        <h1 class="text-[32px] text-center md:text-left lg:text-5xl">
+          Thankyou For Purchasing
+        </h1>
+        <p class="brightness-75 w-4/5 text-[22px] text-center md:text-left">
+          Lorem ipsum dolor sit amet consectetur. Quam pretium pretium tempor
+          integer sed magna et.
+        </p>
+        <div class="gap-3 flex flex-col sm:flex-row items-center">
+          <span>Please Download Your Ticket</span>
+          <a href="#ticket"
+            ><img
+              src="./assets/img/arrow-right.png"
+              alt=""
+              class="rotate-90 sm:rotate-0 w-min"
+          /></a>
         </div>
-
-        <div class="py-6 px-8 mt-10 mb-4 bg-white rounded-lg">
-          <h1 class="border-b-2 border[#DEDEDE] py-3 mb-7">
-            Detail Information
-          </h1>
-
-          <div class="grid grid-cols-2 mb-4 gap-x-6 gap-y-2">
-            <div class="">
-              <label
-                for="firstname"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >First Name</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="text"
-                  name="firstname"
-                  id="firstname"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="Jonas"
-                />
-              </div>
-            </div>
-            <div class="">
-              <label
-                for="lastname"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >Last Name</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="El Rodriguez"
-                />
-              </div>
-            </div>
-            <div class="">
-              <label
-                for="email"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >Email</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="jonasrodrigu123@gmail.com"
-                />
-              </div>
-            </div>
-
-            <div class="">
-              <label
-                for="phone"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >Phone Number</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <div
-                  class="pointer-events-none border-r-2 absolute inset-y-0 left-0 flex items-center px-3"
-                >
-                  <span class="text-gray-500 sm:text-sm">+62</span>
-                </div>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-14 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="81445687121"
-                />
-              </div>
-            </div>
-          </div>
+      </aside>
+      <main
+        class="bg-[#A0A3BD33] sm:w-2/5 h-screen w-full flex flex-col justify-center items-center"
+        id="ticket"
+      >
+        <div
+          class="w-3/5 h-1/4 bg-white flex justify-center items-center rounded-lg"
+        >
+          <img src="./assets/img/qr-code.png" alt="" />
         </div>
-        <div class="py-6 px-8 mt-10 mb-4 bg-white rounded-lg">
-          <h1 class="border-b-2 border[#DEDEDE] py-3 mb-7">
-            Account and Privacy
-          </h1>
-
-          <div class="grid grid-cols-2 mb-4 gap-x-6 gap-y-2">
-            <div class="">
-              <label
-                for="password"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >New Password</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="Write your password"
-                />
-              </div>
-            </div>
-            <div class="">
-              <label
-                for="confirm-pass"
-                class="block text-sm font-medium leading-6 text-[#696F79]"
-                >Confirm Password</label
-              >
-              <div class="relative mt-2 rounded-md shadow-sm">
-                <input
-                  type="password"
-                  name="confirm-pass"
-                  id="confirm-pass"
-                  class="block w-full focus:outline-none rounded-md border-0 py-2.5 pl-6 pr-20 text-[#696F79] ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-400 sm:text-sm sm:leading-6"
-                  placeholder="Confirm your password"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+        <div class="w-1/2 h-8 bg-white"></div>
+        <div class="w-3/5 bg-white h-1/2"></div>
+      </main>
+    </section>
     <!-- ! End Main -->
 
     <!-- ! Footer -->

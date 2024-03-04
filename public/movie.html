@@ -3,88 +3,512 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Your Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/movie.css" />
+    <title>Home</title>
   </head>
   <body>
-    <!--  Header -->
-    <header class="relative bg-white text-secondary p-4">
-      <div class="container flex items-center justify-between">
-        <!-- Logo -->
-
-        <img src="./assets/img/tickitz2.png" alt="Logo" />
-
-        <!-- Navigation -->
-        <nav class="hidden md:flex w-1/3 justify-evenly">
-          <a href="#" class="hover:text-primary">Home</a>
-          <a href="#" class="hover:text-primary">About</a>
-          <a href="#" class="hover:text-primary">Services</a>
-        </nav>
-
-        <!-- Button -->
-        <div class="button flex gap-4">
+    <!--! Start header -->
+    <header class="container py-2">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="./assets/img/tickitz2.png" alt=""
+          /></a>
           <button
-            class="hidden md:block bg-white hover:bg-blue-500 border-2 border-primary text-primary hover:text-secondary px-4 py-2 rounded"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            Sign Up
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <button
-            class="hidden md:block bg-primary hover:bg-blue-500 text-secondary px-4 py-2 rounded"
-          >
-            Sign In
-          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-x-5">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link active" href="#">Movie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-3">
+              <a href="login.html"
+                ><button type="button" class="btn btn-outline-primary">
+                  Sign In
+                </button>
+              </a>
+              <a href="login.html" class="sign-up"
+                ><button type="button" class="btn btn-primary">Sign Up</button>
+              </a>
+            </div>
+          </div>
         </div>
+      </nav>
+    </header>
+    <!-- ! End header -->
 
-        <!-- Hamburger Menu (Mobile) -->
-        <div class="md:hidden">
-          <button id="menu-toggle">
-            <img src="./assets/img/side-nav.png" alt="" />
-          </button>
+    <!-- ! Start hero -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/img/hero.png" class="d-block w-100 h-" />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/img/detail-movie.png" class="d-block w-100" />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/img/hero.png" class="d-block w-100" />
         </div>
       </div>
-      <!-- Mobile Navigation Overlay -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="pb-3 pt-2">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-secondary hover:text-primary hover:text-white" -->
-          <a
-            href="#"
-            class="text-secondary block rounded-md py-2 text-base font-medium"
-            aria-current="page"
-            >Dashboard</a
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- ! End hero -->
+    <!-- ! Start main content -->
+    <main class="main-content container mt-5">
+      <div class="row gap-2">
+        <div class="col-10 col-md-5 col-lg-4">
+          <span>Cari Event</span>
+          <form action="" class="search mt-3">
+            <!-- <label><img src="./assets/img/icon-search.png" alt="" /></label> -->
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder=" 🔍 New Born Expert"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+        <div class="col">
+          <span class="d-block mb-3">Filter</span>
+          <input
+            type="radio"
+            name="btnradio"
+            class="btn-check"
+            id="btncheck1"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary me-lg-4 me-2 mb-2"
+            for="btncheck1"
+            >Thriller</label
           >
-          <a
-            href="#"
-            class="text-secondary hover:text-primary block rounded-md py-2 text-base font-medium"
-            >Home</a
+
+          <input
+            type="radio"
+            name="btnradio"
+            class="btn-check"
+            id="btncheck2"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary me-lg-4 me-2 mb-2"
+            for="btncheck2"
+            >Horror</label
           >
-          <a
-            href="#"
-            class="text-secondary hover:text-primary block rounded-md py-2 text-base font-medium"
-            >About</a
+
+          <input
+            type="radio"
+            name="btnradio"
+            class="btn-check"
+            id="btncheck3"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary me-lg-4 me-2 mb-2"
+            for="btncheck3"
+            >Romantic</label
           >
-          <div class="button flex w-full flex-col gap-3">
-            <button
-              class="w-1/2 bg-white hover:bg-blue-500 border-[1px] border-primary text-primary hover:text-secondary px-4 py-2 rounded"
-            >
-              Sign Up
-            </button>
-            <button
-              class="w-1/2 bg-primary hover:bg-blue-500 text-secondary px-4 py-2 rounded"
-            >
-              Sign In
-            </button>
+          <input
+            type="radio"
+            name="btnradio"
+            class="btn-check"
+            id="btncheck4"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary me-lg-4 me-2 mb-2"
+            for="btncheck4"
+            >Adventure</label
+          >
+          <input
+            type="radio"
+            name="btnradio"
+            class="btn-check"
+            id="btncheck5"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary me-lg-4 me-2 mb-2"
+            for="btncheck5"
+            >Sci-Fi</label
+          >
+        </div>
+      </div>
+      <div
+        class="movie row row-cols-2 row-cols-md-3 row-cols-lg-4 mt-4 justify-content-evenly"
+        id="movie"
+      >
+        <div class="col card">
+          <div class="overlay">
+            <img src="./assets/img/movie1.png" class="card-img-top" alt="..." />
+            <div class="overlay-button">
+              <a href="detail.html" class="detail">Detail</a>
+              <a href="#"
+                ><button type="button" class="btn btn-primary mt-2">
+                  Buy Ticket
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="card-body mt-3 p-0 mb-3">
+            <h4>Black Window</h4>
+            <a href="home.html"
+              ><button type="button" class="btn">Action</button>
+            </a>
+            <a href="home.html" class="sign-up"
+              ><button type="button" class="btn">Adventure</button>
+            </a>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="overlay">
+            <img src="./assets/img/movie2.png" class="card-img-top" alt="..." />
+            <div class="overlay-button">
+              <a href="detail.html" class="detail">Detail</a>
+              <a href="#"
+                ><button type="button" class="btn btn-primary mt-2">
+                  Buy Ticket
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="card-body mt-3 p-0 mb-3">
+            <h4>The Witches</h4>
+            <a href="home.html"
+              ><button type="button" class="btn">Action</button>
+            </a>
+            <a href="home.html" class="sign-up"
+              ><button type="button" class="btn">Adventure</button>
+            </a>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="overlay">
+            <img src="./assets/img/movie3.png" class="card-img-top" alt="..." />
+            <div class="overlay-button">
+              <a href="detail.html" class="detail">Detail</a>
+              <a href="#"
+                ><button type="button" class="btn btn-primary mt-2">
+                  Buy Ticket
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="card-body mt-3 p-0 mb-3">
+            <h4>Tenet</h4>
+            <a href="home.html"
+              ><button type="button" class="btn">Action</button>
+            </a>
+            <a href="home.html" class="sign-up"
+              ><button type="button" class="btn">Adventure</button>
+            </a>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="overlay">
+            <img src="./assets/img/movie4.png" class="card-img-top" alt="..." />
+            <div class="overlay-button">
+              <a href="detail.html" class="detail">Detail</a>
+              <a href="#"
+                ><button type="button" class="btn btn-primary mt-2">
+                  Buy Ticket
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="card-body mt-3 p-0 mb-3">
+            <h4>Spiderman</h4>
+            <a href="home.html"
+              ><button type="button" class="btn">Action</button>
+            </a>
+            <a href="home.html" class="sign-up"
+              ><button type="button" class="btn">Adventure</button>
+            </a>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="overlay">
+            <img src="./assets/img/movie1.png" class="card-img-top" alt="..." />
+            <div class="overlay-button">
+              <a href="detail.html" class="detail">Detail</a>
+              <a href="#"
+                ><button type="button" class="btn btn-primary mt-2">
+                  Buy Ticket
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="card-body mt-3 p-0 mb-3">
+            <h4>Black Window</h4>
+            <a href="home.html"
+              ><button type="button" class="btn">Action</button>
+            </a>
+            <a href="home.html" class="sign-up"
+              ><button type="button" class="btn">Adventure</button>
+            </a>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="overlay">
+            <img src="./assets/img/movie2.png" class="card-img-top" alt="..." />
+            <div class="overlay-button">
+              <a href="detail.html" class="detail">Detail</a>
+              <a href="#"
+                ><button type="button" class="btn btn-primary mt-2">
+                  Buy Ticket
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="card-body mt-3 p-0 mb-3">
+            <h4>The Witches</h4>
+            <a href="home.html"
+              ><button type="button" class="btn">Action</button>
+            </a>
+            <a href="home.html" class="sign-up"
+              ><button type="button" class="btn">Adventure</button>
+            </a>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="overlay">
+            <img src="./assets/img/movie3.png" class="card-img-top" alt="..." />
+            <div class="overlay-button">
+              <a href="detail.html" class="detail">Detail</a>
+              <a href="#"
+                ><button type="button" class="btn btn-primary mt-2">
+                  Buy Ticket
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="card-body mt-3 p-0 mb-3">
+            <h4>Tenet</h4>
+            <a href="home.html"
+              ><button type="button" class="btn">Action</button>
+            </a>
+            <a href="home.html" class="sign-up"
+              ><button type="button" class="btn">Adventure</button>
+            </a>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="overlay">
+            <img src="./assets/img/movie4.png" class="card-img-top" alt="..." />
+            <div class="overlay-button">
+              <a href="detail.html" class="detail">Detail</a>
+              <a href="#"
+                ><button type="button" class="btn btn-primary mt-2">
+                  Buy Ticket
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="card-body mt-3 p-0 mb-3">
+            <h4>Spiderman</h4>
+            <a href="home.html"
+              ><button type="button" class="btn">Action</button>
+            </a>
+            <a href="home.html" class="sign-up"
+              ><button type="button" class="btn">Adventure</button>
+            </a>
           </div>
         </div>
       </div>
-    </header>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center mt-4">
+          <!-- <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li> -->
+          <li class="page-list me-3">
+            <a class="page-link active" href="#movie">1</a>
+          </li>
+          <li class="page-list me-3">
+            <a class="page-link" href="#movie">2</a>
+          </li>
+          <li class="page-list me-3">
+            <a class="page-link" href="#movie">3</a>
+          </li>
+          <li class="page-list me-3">
+            <a class="page-link" href="#movie" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+    <!-- ! End main content -->
+    <!-- ! Start subscribe -->
+    <section
+      class="container mt-5 rounded d-flex flex-column justify-content-center align-items-center position-relative subscribe"
+    >
+      <h1 class="text-light text-center">Subscribe to our newsletter</h1>
+      <form
+        class="mt-3 w-md-75 row justify-content-between row-cols-md-1 row-cols-md-3 flex-md-nowrap gap-3 gap-md-2"
+      >
+        <div class="px-0">
+          <input
+            type="text"
+            class="form-control py-2"
+            id="exampleInputname1"
+            aria-describedby="nameHelp"
+            placeholder="Firs name"
+          />
+        </div>
+        <div class="p-0">
+          <input
+            type="email"
+            class="form-control py-2"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+          />
+        </div>
+        <button type="submit" class="btn btn-light py-2 text-primary">
+          Subscribe Now
+        </button>
+      </form>
+      <img
+        src="./assets/img/line-rounded.png"
+        alt=""
+        class="position-absolute bottom-0 end-0"
+      />
+    </section>
+    <!-- ! End subscribe -->
+    <!-- ! Start footer -->
+    <footer class="container mt-5">
+      <div class="row row-cols-md-2 row-cols-lg-4 justify-content-between">
+        <div class="tickitz footer__item">
+          <img src="./assets/img/tickitz2.png" alt="" />
+          <p class="mt-3">
+            Stop waiting in line. Buy tickets conveniently, watch movies quetly
+          </p>
+        </div>
+        <div class="explore footer__item">
+          <span class="fw-bold">Explore</span>
+          <ul>
+            <li><a href="#">Cinemas</a></li>
+            <li><a href="#">Movies List</a></li>
+            <li><a href="#">My Ticket</a></li>
+            <li><a href="#">Notification</a></li>
+          </ul>
+        </div>
+        <div class="sponsor footer__item">
+          <span class="fw-bold">Our Sponsor</span>
+          <ul class="mt-3">
+            <li class="mb-4"><img src="./assets/img/sponsor1.png" alt="" /></li>
+            <li class="mb-4"><img src="./assets/img/sponsor2.png" alt="" /></li>
+            <li class="mb-4"><img src="./assets/img/sponsor3.png" alt="" /></li>
+          </ul>
+        </div>
+        <div class="follow footer__item">
+          <span class="fw-bold">Follow Us</span>
+          <ul>
+            <li>
+              <img src="./assets/img/icon-fb.png" class="me-2" /><a
+                href="#"
+                class="d-none d-sm-inline"
+                >Tickitz Cinema id</a
+              >
+            </li>
+            <li>
+              <img src="./assets/img/sosmed2.png" class="me-2" /><a
+                href="#"
+                class="d-none d-sm-inline"
+                >Tickitz.id</a
+              >
+            </li>
+            <li>
+              <img src="./assets/img/sosmed1.png" class="me-2" /><a
+                href="#"
+                class="d-none d-sm-inline"
+                >Tickitz.id</a
+              >
+            </li>
+            <li>
+              <img src="./assets/img/sosmed3.png" class="me-2" /><a
+                href="#"
+                class="d-none d-sm-inline"
+                >Tickitz Cinema id</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-5 mb-5">
+        © 2020 Tickitz. All Rights Reserved
+      </div>
+    </footer>
 
-    <script>
-      // Toggle mobile menu visibility
-      document
-        .getElementById("menu-toggle")
-        .addEventListener("click", function () {
-          document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ! End footer -->
   </body>
 </html>

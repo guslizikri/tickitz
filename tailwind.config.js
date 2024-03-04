@@ -9,6 +9,13 @@ module.exports = {
       colors: {
         primary: "#1D4ED8",
         secondary: "#0F172A",
+      },
+      backgroundImage: {
+        'hero-result': "url('/public/assets/img/bg-result.png')",
+        'profile': "url('/public/assets/img/profile.png')",
+      },
+      boxShadow: {
+        'shadow-blur': "inset 0 0 0 2000px rgba(27, 27, 27, 0.5)",
       }
     },
   },
