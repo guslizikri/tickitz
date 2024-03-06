@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+.filter .btn-outline-primary:hover {
+  background-color: #1d4ed8;
+  color: #fff;
+}
+
 .carousel-item img {
   height: 462px;
   filter: brightness(50%);

@@ -24,17 +24,9 @@
         </nav>
 
         <!-- Button -->
-        <div class="button flex gap-4">
-          <button
-            class="hidden md:block bg-white hover:text-white hover:bg-blue-600 border-2 border-primary text-primary px-4 py-2 rounded"
-          >
-            Sign Up
-          </button>
-          <button
-            class="hidden md:block bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded"
-          >
-            Sign In
-          </button>
+        <div class="button hidden md:flex gap-4 items-center">
+          <div><img src="./assets/img/icon-search2.png" alt="" /></div>
+          <img src="./assets/img/profile-mini.png" alt="" />
         </div>
 
         <!-- Hamburger Menu (Mobile) -->
@@ -69,33 +61,54 @@
             class="text-secondary hover:text-primary block rounded-md py-2 text-base font-medium"
             >Services</a
           >
-          <div class="button flex w-full flex-col gap-3">
-            <button
-              class="w-1/2 bg-white hover:bg-blue-600 border-[1px] border-primary text-primary hover:text-secondary px-4 py-2 rounded"
-            >
-              Sign Up
-            </button>
-            <button
-              class="w-1/2 bg-primary hover:bg-blue-600 text-secondary px-4 py-2 rounded"
-            >
-              Sign In
-            </button>
+          <div class="button flex w-full items-center gap-3">
+            <div><img src="./assets/img/profile-mini.png" alt="" /></div>
+            <div><img src="./assets/img/icon-search2.png" alt="" /></div>
           </div>
         </div>
       </div>
     </header>
     <!-- ! Main -->
-    <main class="container min-h-screen mt-12 bg-red-700 flex gap-5">
+    <main class="lg:container min-h-screen md:mt-12 md:flex gap-5">
       <div
-        class="profile w-1/4 flex justify-center bg-white h-screen rounded-lg"
+        class="profile hidden md:block w-4/5 sm:w-3/5 md:w-1/4 bg-white min-h-screen rounded-lg divide-y-2"
       >
-        <div
-          class="w-[136px] h-[136px] rounded-full bg-profile bg-no-repeat bg-cover"
-        ></div>
+        <div class="py-8">
+          <div class="px-5 flex justify-between items-center">
+            <span>INFO</span>
+            <img src="./assets/img/icon-setting.png" alt="" />
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-[136px] h-[136px] rounded-full bg-profile bg-no-repeat bg-cover"
+            ></div>
+            <h1>Jonas El Rodriguez</h1>
+            <span>Moviegoers</span>
+          </div>
+        </div>
+        <div class="py-8 space-y-5">
+          <h1 class="px-5">loyalty Points</h1>
+          <div class="flex justify-center">
+            <img src="./assets/img/loyalpoint.png" alt="" />
+          </div>
+          <p class="px-5">180 points become a master</p>
+          <div class="flex px-5 w-full justify-center items-center">
+            <div class="w-full h-3.5 bg-slate-400 rounded-lg">
+              <div class="w-1/2 h-full bg-primary rounded-lg"></div>
+            </div>
+          </div>
+          <div class="flex md:hidden justify-center">
+            <button
+              class="w-4/5 bg-white border-[1px] border-primary hover:bg-primary hover:text-white text-primary px-4 py-2 rounded-lg"
+            >
+              Edit Profile
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="history w-3/4">
+      <div class="history md:container md:w-3/4">
         <div
-          class="bg-white mb-10 text-secondary px-8 py-4 rounded-lg space-x-8"
+          class="bg-white mb-10 text-secondary px-8 py-4 md:rounded-lg space-x-8"
         >
           <a href="./profile.html" class="text-[#AAAAAA] hover:text-primary"
             >Account Settings</a
@@ -105,8 +118,10 @@
           >
         </div>
 
-        <div class="py-2 mb-4 bg-white rounded-lg">
-          <div class="flex justify-between py-5 px-12 border-b-2 items-center">
+        <div class="mx-4 md:mx-0 py-2 mb-4 bg-white rounded-lg">
+          <div
+            class="flex flex-col-reverse gap-y-3 sm:flex-row sm:justify-between py-5 px-12 border-b-2 sm:items-center"
+          >
             <div class="space-y-2">
               <span class="text-[#AAAAAA]"
                 >Tuesday, 07 July 2020 - 04:30pm</span
@@ -117,20 +132,24 @@
               <img src="./assets/img/ordersponsor1.png" alt="" />
             </div>
           </div>
-          <div class="flex justify-between items-center py-5 px-12">
-            <div class="button space-x-4">
+          <div
+            class="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center py-5 px-12"
+          >
+            <div
+              class="flex justify-center flex-col sm:inline-block button space-y-2 lg:space-x-4"
+            >
               <button
-                class="w-[196px] bg-[#00BA8833] hover:brightness-50 text-[#00BA88] px-4 py-2 rounded"
+                class="sm:w-[196px] w-[279px] bg-[#00BA8833] hover:brightness-50 text-[#00BA88] px-4 py-2 rounded"
               >
                 Ticket in active
               </button>
               <button
-                class="w-[196px] bg-[#E82C2C33] hover:brightness-50 text-[#E82C2C] px-4 py-2 rounded"
+                class="sm:w-[196px] w-[279px] bg-[#E82C2C33] hover:brightness-50 text-[#E82C2C] px-4 py-2 rounded"
               >
                 Not Paid
               </button>
             </div>
-            <div>
+            <div class="w-4/5 sm:w-1/4 text-center sm:text-end mt-5 sm:mt-0">
               <span
                 class="text-[#AAAAAA] hover:cursor-pointer"
                 id="button-show-detail"
@@ -167,32 +186,36 @@
             </button>
           </div>
         </div>
-        <div class="py-2 mb-4 bg-white rounded-lg">
-          <div class="flex justify-between py-5 px-12 border-b-2 items-center">
+        <div class="mx-4 md:mx-0 py-2 mb-4 bg-white rounded-lg">
+          <div
+            class="flex flex-col-reverse gap-y-3 sm:flex-row sm:justify-between py-5 px-12 border-b-2 sm:items-center"
+          >
             <div class="space-y-2">
-              <span class="text-[#AAAAAA]"
-                >Tuesday, 07 July 2020 - 04:30pm</span
-              >
-              <h1 class="font-bold text-2xl">Spider-Man: Homecoming</h1>
+              <span class="text-[#AAAAAA]">Monday, 14 June 2020 - 02:00pm</span>
+              <h1 class="font-bold text-2xl">Avengers: End Game</h1>
             </div>
             <div>
-              <img src="./assets/img/ordersponsor1.png" alt="" />
+              <img src="./assets/img/ordersponsor2.png" alt="" />
             </div>
           </div>
-          <div class="flex justify-between items-center py-5 px-12">
-            <div class="button space-x-4">
+          <div
+            class="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center py-5 px-12"
+          >
+            <div
+              class="flex justify-center flex-col sm:inline-block button space-y-2 lg:space-x-4"
+            >
               <button
-                class="w-[196px] bg-[#6E719133] hover:brightness-50 text-black px-4 py-2 rounded"
+                class="sm:w-[196px] w-[279px] bg-[#6E719133] hover:brightness-50 text-black px-4 py-2 rounded"
               >
-                Ticket in active
+                Ticket Used
               </button>
               <button
-                class="w-[196px] bg-[#1D4ED833] hover:brightness-50 text-primary px-4 py-2 rounded"
+                class="sm:w-[196px] w-[279px] bg-[#1D4ED833] hover:brightness-50 text-primary px-4 py-2 rounded"
               >
-                Not Paid
+                Paid
               </button>
             </div>
-            <div>
+            <div class="w-4/5 sm:w-1/4 text-center sm:text-end mt-5 sm:mt-0">
               <span
                 class="text-[#AAAAAA] hover:cursor-pointer"
                 id="button-show-detail2"
@@ -201,40 +224,45 @@
             </div>
           </div>
           <div class="hidden mb-4 space-y-4 py-1 px-12" id="show-detail2">
-            <h1 class="font-bold text-lg">Ticket Information</h1>
+            <h1 class="font-bold text-lg text-center sm:text-left">
+              Ticket Information
+            </h1>
 
-            <div class="flex">
+            <div class="flex flex-col sm:flex-row items-center gap-3">
               <div class="img">
                 <img src="./assets/img/qr-code.png" alt="" />
               </div>
-              <div class="grid grid-cols-4 bg-slate-400">
-                <div class="bg-fuchsia-400">
-                  <h6>Category</h6>
+              <div class="grid sm:grid-cols-4 grid-cols-3 gap-5">
+                <div class="">
+                  <h6 class="text-[#AAAAAA]">Category</h6>
                   <span>PG-13</span>
                 </div>
                 <div>
-                  <h6>Category</h6>
-                  <span>PG-13</span>
+                  <h6 class="text-[#AAAAAA]">Time</h6>
+                  <span>2:00pm</span>
                 </div>
                 <div>
-                  <h6>Category</h6>
-                  <span>PG-13</span>
+                  <h6 class="text-[#AAAAAA]">Seats</h6>
+                  <span>C4, C5, C6</span>
+                </div>
+                <div
+                  class="row-span-2 row-start-3 col-span-3 sm:col-span-1 sm:row-start-auto justify-self-center self-center"
+                >
+                  <h6 class="text-[#AAAAAA]">Total</h6>
+                  <span class="font-bold text-2xl">$30.00</span>
                 </div>
                 <div>
-                  <h6>Category</h6>
-                  <span>PG-13</span>
+                  <h6 class="text-[#AAAAAA]">Movie</h6>
+                  <span>Spider-Man: ..</span>
+                </div>
+
+                <div>
+                  <h6 class="text-[#AAAAAA]">Date</h6>
+                  <span>07 Jul</span>
                 </div>
                 <div>
-                  <h6>Category</h6>
-                  <span>PG-13</span>
-                </div>
-                <div>
-                  <h6>Category</h6>
-                  <span>PG-13</span>
-                </div>
-                <div>
-                  <h6>Category</h6>
-                  <span>PG-13</span>
+                  <h6 class="text-[#AAAAAA]">Count</h6>
+                  <span>3 pcs</span>
                 </div>
               </div>
             </div>
@@ -244,74 +272,6 @@
     </main>
     <!-- ! End Main -->
 
-    <!-- ! Footer -->
-    <footer class="mt-5 py-5">
-      <div
-        class="container px-5 flex-wrap lg:flex-nowrap justify-between md:px-16 flex"
-      >
-        <div class="w-4/5 md:w-[48%] lg:w-[22%] mb-10">
-          <img src="./assets/img/tickitz2.png" alt="Tickitz" />
-          <p class="mt-4">
-            Stop waiting in line. Buy tickets conveniently, watch movies quetly
-          </p>
-        </div>
-        <div class="w-4/5 md:w-[48%] lg:w-[22%] mb-10">
-          <span class="font-bold">Explore</span>
-          <ul class="flex flex-wrap gap-5 md:block md:space-y-3 mt-3">
-            <li><a href="#">Cinemas</a></li>
-            <li><a href="#">Movies List</a></li>
-            <li><a href="#">My Ticket</a></li>
-            <li><a href="#">Notification</a></li>
-          </ul>
-        </div>
-        <div class="w-4/5 md:w-[48%] lg:w-[22%] mb-10">
-          <span class="font-bold">Our Sponsor</span>
-          <ul class="mt-3 flex md:block items-center gap-6 flex-wrap">
-            <li class="mb-4">
-              <img src="./assets/img/sponsor1.png" alt="EbuId" />
-            </li>
-            <li class="mb-4">
-              <img src="./assets/img/sponsor2.png" alt="CineOne21" />
-            </li>
-            <li class="mb-4">
-              <img src="./assets/img/sponsor3.png" alt="Hiflix" />
-            </li>
-          </ul>
-        </div>
-        <div class="w-4/5 md:w-[48%] lg:w-[22%] mb-10">
-          <span class="font-bold">Follow Us</span>
-          <ul class="flex md:block gap-6">
-            <li class="flex gap-1 my-4">
-              <img src="./assets/img/sosmed1.png" alt="" class="me-2" />
-              <a href="#" class="hidden md:inline">Tickitz Cinema id</a>
-            </li>
-            <li class="flex gap-1 my-4">
-              <img src="./assets/img/sosmed2.png" alt="" class="me-2" /><a
-                href="#"
-                class="hidden md:inline"
-                >Tickitz.id</a
-              >
-            </li>
-            <li class="flex gap-1 my-4">
-              <img src="./assets/img/sosmed3.png" alt="" class="me-2" /><a
-                href="#"
-                class="hidden md:inline"
-                >Tickitz.id</a
-              >
-            </li>
-            <li class="flex gap-1 my-4">
-              <img src="./assets/img/sosmed4.png" alt="" class="me-2" /><a
-                href="#"
-                class="hidden md:inline"
-                >Tickitz Cinema id</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="text-center">© 2020 Tickitz. All Rights Reserved</div>
-    </footer>
-    <!-- ! End Footer -->
     <script>
       // Toggle mobile menu visibility
       document

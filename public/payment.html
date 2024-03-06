@@ -85,7 +85,9 @@
       </div>
     </header>
     <!-- ! Main -->
-    <main class="bg-[#A0A3BD33] flex flex-col items-center py-5 justify-center">
+    <main
+      class="relative bg-[#A0A3BD33] flex flex-col items-center py-5 justify-center"
+    >
       <div class="hidden w-1/2 md:flex my-8 justify-evenly">
         <div class="w-[30%] flex flex-col justify-center items-center">
           <div
@@ -196,53 +198,108 @@
             </div>
           </div>
         </div>
-        <div class="paymen-method mt-7">
-          <h1 class="font-bold text-2xl my-5">Personal Information</h1>
+        <div class="paymen-method my-7">
+          <h1 class="font-bold text-2xl my-5">Payment Method</h1>
 
           <div class="flex flex-wrap justify-between gap-y-6">
             <div
-              class="border-[1px] border-[#DEDEDE] rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
+              class="border-[1px] border-[#DEDEDE] hover:cursor-pointer hover:bg-slate-200 rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
             >
               <img src="./assets/img/payment1.png" alt="" class="w-min" />
             </div>
             <div
-              class="border-[1px] border-[#DEDEDE] rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
+              class="border-[1px] border-[#DEDEDE] hover:cursor-pointer hover:bg-slate-200 rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
             >
               <img src="./assets/img/payment2.png" alt="" class="w-min" />
             </div>
             <div
-              class="border-[1px] border-[#DEDEDE] rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
+              class="border-[1px] border-[#DEDEDE] hover:cursor-pointer hover:bg-slate-200 rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
             >
               <img src="./assets/img/payment3.png" alt="" class="w-min" />
             </div>
             <div
-              class="border-[1px] border-[#DEDEDE] rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
+              class="border-[1px] border-[#DEDEDE] hover:cursor-pointer hover:bg-slate-200 rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
             >
               <img src="./assets/img/payment4.png" alt="" class="w-min" />
             </div>
             <div
-              class="border-[1px] border-[#DEDEDE] rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
+              class="border-[1px] border-[#DEDEDE] hover:cursor-pointer hover:bg-slate-200 rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
             >
               <img src="./assets/img/payment5.png" alt="" class="w-min" />
             </div>
             <div
-              class="border-[1px] border-[#DEDEDE] rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
+              class="border-[1px] border-[#DEDEDE] hover:cursor-pointer hover:bg-slate-200 rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
             >
               <img src="./assets/img/payment6.png" alt="" class="w-min" />
             </div>
             <div
-              class="border-[1px] border-[#DEDEDE] rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
+              class="border-[1px] border-[#DEDEDE] hover:cursor-pointer hover:bg-slate-200 rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
             >
               <img src="./assets/img/payment7.png" alt="" class="w-min" />
             </div>
             <div
-              class="border-[1px] border-[#DEDEDE] rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
+              class="border-[1px] border-[#DEDEDE] hover:cursor-pointer hover:bg-slate-200 rounded-md w-[48%] md:w-[23%] p-5 flex justify-center"
             >
               <img src="./assets/img/payment8.png" alt="" class="w-min" />
             </div>
           </div>
         </div>
+        <button
+          class="w-full bg-primary hover:brightness-50 text-white px-4 py-2 rounded"
+          id="pay-order"
+        >
+          Pay You Order
+        </button>
       </div>
+      <!-- ! Modal Form Edit Profile -->
+      <div
+        id="modal"
+        class="hidden absolute top-0 w-screen h-full bg-black bg-opacity-50"
+      >
+        <div class="flex h-full mb-12 justify-center items-center w-screen">
+          <div
+            onclick="event.stopImmediatePropagation()"
+            class="flex justify-center bg-white w-4/5 md:w-3/5 lg:w-1/2 p-8 rounded-lg"
+          >
+            <div class="mb-4 space-y-4 py-1 px-2" id="show-detail">
+              <h1 class="font-bold text-lg">Ticket Information</h1>
+              <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between"
+              >
+                <span class="text-[#8692A6]">No. Rekening Virtual</span>
+                <div class="flex justify-between items-center gap-2">
+                  <span class="font-bold">12321328913829724</span>
+                  <button
+                    class="sm:w-1/2 w-1/4 hover:cursor-pointer text-primary border-[1px] border-primary px-4 py-2 rounded"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-[#8692A6]">Total Payment</span>
+                <span class="text-primary">$30</span>
+              </div>
+              <p class="text-[#8692A6] tracking-wide text-lg">
+                Pay this payment bill before it is due, on
+                <span class="text-[#D00707]">June 23, 2023</span>. If the bill
+                has not been paid by the specified time, it will be forfeited
+              </p>
+              <button
+                class="w-full bg-primary hover:bg-blue-600 text-white px-4 py-3 rounded"
+              >
+                Check Payment
+              </button>
+              <button
+                class="w-full bg-white hover:bg-primary hover:text-white text-primary border-[1px] px-4 py-3 rounded"
+              >
+                Pay Later
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ! End Modal -->
     </main>
     <!-- ! End Main -->
 
@@ -321,6 +378,14 @@
         .addEventListener("click", function () {
           document.getElementById("mobile-menu").classList.toggle("hidden");
         });
+      document
+        .getElementById("pay-order")
+        .addEventListener("click", function () {
+          document.getElementById("modal").classList.remove("hidden");
+        });
+      document.getElementById("modal").addEventListener("click", function () {
+        document.getElementById("modal").classList.add("hidden");
+      });
     </script>
   </body>
 </html>
